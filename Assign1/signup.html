@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign up here!</title>
+	</head>
+	<body>
+		<form action="signup.php" method="POST">
+			<p>
+				<label>Username</label><br>
+				<input type="text" placeholder="Username" name="username">
+			</p>
+			<p>
+				<label>Name</label><br>
+				<input type="text" placeholder="Name" name="name">
+			</p>
+			<p>
+				<label>Password</label><br>
+				<input type="password" placeholder="Password" name="password">
+			</p>
+			<p>
+				<label>Confirm Password</label><br>
+				<input type="password" placeholder="Confirm" name="confirm">
+			</p>
+			<p>
+				<label>Email</label><br>
+				<input type="email" placeholder="Email" name="email">
+			</p>
+			<p>
+				<label>Birthday</label><br>
+				<input type="date" placeholder="MM/DD/YYYY" name="birthday">
+			</p>
+			<p>
+				<label>Gender</label><br>
+				<input type="radio" name="gender" value="0" checked> Male<br>
+  				<input type="radio" name="gender" value="1"> Female<br>
+  				<input type="radio" name="gender" value="2"> Default
+  			</p>
+  			<p>
+				<label>Verification Question</label><br>
+				<input type="text" name="question">
+			</p>
+			<p>
+				<label>Verification Answer</label><br>
+				<input type="text" name="answer">
+			</p>
+			<p>
+				<label>Location</label><br>
+				<input type="text" placeholder="123 Dirt Road, San Antonio, Texas, United States 78260" name="location">
+			</p>
+			<p>
+				<label>Profile Picture</label><br>
+				<input type="text" placeholder="url here" name="picture">
+			</p>
+			<p>	
+				<input type="submit">
+			</p>
+		</form>
+	</body>
+</html>
