@@ -8,7 +8,9 @@
 
     	session_destroy();
 	}
-
+	/*
+	* currently this function does not return correctly so return the string as it is
+	*/
 	function sanitizeString($var){
 		$var = strip_tags($var);
 		$var = htmlentities($var);

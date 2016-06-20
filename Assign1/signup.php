@@ -36,7 +36,6 @@
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
-	//$result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
 	$sql = mysqli_query($conn, "INSERT INTO users(username, password, Name, verification_question, verification_answer, dob, location, profile_pic, email, gender) 
 		VALUES ('$username', '$pwh', '$name', '$question', '$answer', '$birthday', '$location', '$picture', '$email', $gender)");
 	//Check in the DB

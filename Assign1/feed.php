@@ -20,11 +20,11 @@
   </style>
 <?php
 	include('database.php');
-	
+	//begin local session
 	session_start();
 
 	$conn = connect_db();
-
+	//get username from current session variables
 	$username = $_SESSION["username"];
 	$result = mysqli_query($conn, "SELECT * FROM users WHERE Username='$username'");
 
@@ -52,6 +52,7 @@
 
 	//show all posts on myfacebook
 	//between each post, also allow user to put comments and display all comments with each post
+	//---according to that individual post
 	for($i = 0; $i < $num_of_rows; $i++){
 
 		$row = mysqli_fetch_row($result_posts);
@@ -60,7 +61,7 @@
 		echo "<form action='likes.php' method='POST'> <input type='hidden' name='PID' value='$row[0]'> <input type='submit' value='Like'></form>";
 		echo "<br>";
 
-
+		// form for comment, similar to post form
 		echo "<form method='POST' action='comments.php'>
             <textarea name='content' placeholder='Add comment to $row[5]...'></textarea><br>
             <input type='hidden' name='PID' value='$row[0]'>
